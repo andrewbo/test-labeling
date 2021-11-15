@@ -1,2 +1,2 @@
-master:
-  - *
+merge-to-master:
+  - master
