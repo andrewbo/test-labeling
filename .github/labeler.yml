@@ -1,2 +1,5 @@
-@attention/merging/to/master: '**' #attention/merging/to/master
+attention:
+- '**'
 
+master:
+- '**/*'
