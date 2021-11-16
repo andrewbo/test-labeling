@@ -1,5 +1,2 @@
-attention:
+attention,master:
 - '**'
-
-master:
-- '**/*'
