@@ -1,2 +1,4 @@
-merge_to_master:
+attention:
+  - '**'
+❗master:
   - '**'
