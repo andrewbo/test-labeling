@@ -10,13 +10,13 @@ jobs:
 #    if: ${{ github.head_ref == 'master' &&  }}
     steps:
       - name: Echo base branch name
-        id: source_branch
+        id: base_branch
         run: echo ${{ github.base_ref }}
       - name: Echo target branch name
-        id: source_branch
+        id: target_branch
         run: echo ${{ github.head_ref }}
       - name: Echo trigger branch name
-        id: source_branch
+        id: trigger_branch
         run: echo ${{ github.ref_name }}
 #      - uses: actions/checkout@v2
 #      - uses: IvanFon/super-labeler-action@v1
