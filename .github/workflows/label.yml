@@ -13,10 +13,10 @@ jobs:
     if: ${{ github.base_ref == 'master' && !startsWith(github.head_ref, 'r/') }}
     steps:
     - uses: actions/labeler@v3
-      configuration-path: '.github/labeler_attention.yml'
       with:
+        configuration-path: '.github/labeler_attention.yml'
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
     - uses: actions/labeler@v3
-      configuration-path: '.github/labeler_master.yml'
       with:
+        configuration-path: .github/labeler_master.yml
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
