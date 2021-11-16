@@ -1,4 +1,2 @@
-attention:
-  - '**'
-master:
+@attention/merging/to/master:
   - '**'
