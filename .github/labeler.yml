@@ -1,2 +1,2 @@
 @attention/merging/to/master:
-  - '**'
+  - any: ['**']
