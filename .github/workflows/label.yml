@@ -1,17 +1,24 @@
-name: Labeler
 on:
-  pull_request:
-    branches:
-      - master
-    
+  pull_request
+#    branches:
+#      - main
+
 jobs:
   label:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    name: Label issues and pull requests
+#    if: ${{ github.head_ref == 'master' &&  }}
     steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/labeler.yml
+      - name: Echo base branch name
+        id: source_branch
+        run: echo ${{ github.base_ref }}
+      - name: Echo target branch name
+        id: source_branch
+        run: echo ${{ github.head_ref }}
+      - name: Echo trigger branch name
+        id: source_branch
+        run: echo ${{ github.ref_name }}
+#      - uses: actions/checkout@v2
+#      - uses: IvanFon/super-labeler-action@v1
+#        with:
+#          github-token: '${{ secrets.GITHUB_TOKEN }}'
